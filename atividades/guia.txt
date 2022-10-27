@@ -1,0 +1,54 @@
+utilizando os conceitos de modelagens explicados na aula passada, crie uma pasta principal para o seu projeto
+
+você irá construir programas utilizando funções, estas funções devem conter códigos condicionais das suas aplicações .
+
+===
+
+Crie um programa que leia nome, ano de nascimento e carteira de trabalho de uma pessoa e cadastre-os através de um dicionário em um input
+
+se o número da carteira de trabalho for diferente de ZERO, o dicionário receberá através de uma condicional também os dados do primeiro ano de contratação e o salário.
+
+ao final do programa imprima os dados solicitados, esta construção deve ser feita através de funções
+
+===
+
+Faça um programa que solicite o nome de um aluno
+
+solicite também a inserção das últimas três notas  este cálculo deve realizar a média desse aluno, e através desta condição deve ser impresso o nome do aluno
+
+as três notas digitadas e a média final, e deve ser impresso se o aluno foi aprovado ou nao!
+
+===
+
+
+Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os dados de cada pessoa em um dicionário e todos os dicionários em uma lista. 
+No final, mostre:
+
+A) Quantas pessoas foram cadastradas;
+B) A média de idade do grupo;
+C) Uma lista com todas as mulheres;
+D) Uma lista com todas as pessoas com idade acima da média.
+
+===
+
+Faça um programa que tenha uma função chamada contador(),
+
+===
+
+que receba três parâmetros: inicio, fim e passo e realize a contagem.
+
+===
+
+Seu programa tem que realizar três contagens através da função criada:
+
+===
+
+A) De 1 até 10, de 1 em 1
+
+===
+
+B) De 10 até 0, de 2 em 2
+
+===
+
+C) Uma contagem personalizada
