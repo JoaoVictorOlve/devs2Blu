@@ -1,7 +1,5 @@
 from controller import fazerCheckin, relatorioHospedes, procurarHospedes, fazerCheckout
 import os
-import time
-
 
 
 def menu():
@@ -33,21 +31,27 @@ def menu():
 
             case '3':
                 os.system('cls')
-                clienteFind = str(input('Digite o nome desejado\n>'))
+                clienteFind = input('Digite o nome desejado\n>')
                 procurarHospedes(clienteFind)
+                sair = input('Pressione enter para continuar')
 
             case '4':
                 os.system('cls')
-                clienteFind = input('Digite o índice\n>')
-                fazerCheckout(clienteFind)
+                hospede = input('Digite o índice\n>')
+                try: #Caso não dê erro, é porque foi digitado um valor que pode ser um inteiro (tipo 10)
+                    intHospede = int(hospede)
+                    fazerCheckout(intHospede)
+                except: #Caso dê erro, é porque foi digitado um valor que não pode ser inteiro (tipo "Anderson" ou 20.492)
+                    print('Valor inválido!')
+                sair = input('Pressione enter para continuar')
+                
             case '5':
                 os.system('cls')
                 print('Encerrando sistema!')
-                time.sleep(3)
                 break #Quebra o loop do menu
 
             case _:
-                print('Valor incorreto!')
+                print('Valor incorreto!') #Quando é digitado qualquer outro valor, dá erro e retorna para o começo do loop do menu
                 sair = input('Pressione enter para voltar')
 
 menu()
