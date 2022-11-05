@@ -1,9 +1,10 @@
 class Conta:
-    def __init__(self, numero, titular, saldo, cpf, limite):
-        print(f'Imprimindo variavel referencia {self}')
+    # Atributos recebendo tipos
+    titular = ''
+    numero = 0
+    saldo = 0
+    limite = 0
 
-        self.numero = numero
-        self.titular = titular
-        self.saldo = saldo
-        self.cpf = cpf
-        self.limite = limite
+    def __str__(self):
+        
+        return f'{self.titular} - {self.numero} - {self.saldo} - {self.limite}'

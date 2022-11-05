@@ -1,10 +1,25 @@
 from conta import Conta
 
-conta1 = Conta(123, 'Felipe', 1500.0, 987654, 100000.0)
+conta = Conta()
 
-print("*"*30)
-print(f"Imprimindo espaco Objeto{conta1}")
+conta.titular = 'Lira'
+conta.numero = 123456
+conta.saldo = 120
+conta.limite = 1200.00
 
-conta2 = Conta(123, 'Felipe2', 1200.0, 9876234, 1111.0)
-print("*"*30)
-print(f"Imprimindo espaco Objeto{conta2}")
+conta1 = Conta()
+
+conta1.titular = 'Haiko'
+conta1.numero = 98654
+conta1.saldo = 130
+conta1.limite = 1300.00
+
+conta2 = Conta()
+conta2.titular = 'Jean'
+conta2.numero = 4984234
+conta2.saldo = 150
+conta2.limite = 1500.00
+
+print(conta)
+print(conta1)
+print(conta2)
