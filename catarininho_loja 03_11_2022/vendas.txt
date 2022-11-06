@@ -1,0 +1,4 @@
+item:Caixa de sucrilhos lucro:23.97 quantidade vendida:3
+item:Suco de uva lucro:14.0 quantidade vendida:2
+item:Caixa de leite lucro:5.5 quantidade vendida:1
+item:Caixa de ovo lucro:31.5 quantidade vendida:3

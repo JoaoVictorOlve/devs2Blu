@@ -1,0 +1,4 @@
+{'nome': 'Caixa de sucrilhos', 'tipo': 'Cereal', 'preco': 7.99, 'quantidade': 12, 'quantidadeInicial': 15}
+{'nome': 'Suco de uva', 'tipo': 'bebida', 'preco': 7.0, 'quantidade': 8, 'quantidadeInicial': 10}
+{'nome': 'Caixa de leite', 'tipo': 'Bebida', 'preco': 5.5, 'quantidade': 29, 'quantidadeInicial': 30}
+{'nome': 'Caixa de ovo', 'tipo': 'Alimento', 'preco': 10.5, 'quantidade': 27, 'quantidadeInicial': 20}
