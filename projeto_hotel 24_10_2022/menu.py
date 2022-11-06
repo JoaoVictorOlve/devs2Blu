@@ -5,7 +5,9 @@ import os
 def menu():
     while True: #Loop do Menu
         os.system('cls')
-        poli = '='*10 #Cabeçalho
+        poli = '='*25 #Cabeçalho
+
+        print(f'{poli}\nHOTEL MARIA DO ARVOREDO')
         print(f'{poli}\n1 - Fazer Check in\n2 - Relatório Hóspedes\n3 - Procurar Hóspedes\n4 - Fazer Check out\n5 - Finalizar Atendimento\n{poli}')
         
         pedido = input(':>')
