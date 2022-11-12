@@ -34,4 +34,4 @@ class Animal:
         return self.__cor
 
     def __str__(self):
-        print(f'Especie: {self.get_especie()}\nRaça: {self.get_especie()}\nPorte: {self.get_porte()}\nCor: {self.get_cor()}')
+        return f'{self.get_especie()} - {self.get_raca()} - {self.get_porte()} - {self.get_cor()}'

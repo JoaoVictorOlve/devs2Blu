@@ -34,4 +34,4 @@ class Carro:
         return self.__categoria
 
     def __str__(self):
-        print(f'Marca: {self.get_marca()}\nModelo: {self.get_modelo()}\nCor: {self.get_cor()}\nCategoria: {self.get_categoria()}')
+        return f'Marca: {self.get_marca()}\nModelo: {self.get_modelo()}\nCor: {self.get_cor()}\nCategoria: {self.get_categoria()}'

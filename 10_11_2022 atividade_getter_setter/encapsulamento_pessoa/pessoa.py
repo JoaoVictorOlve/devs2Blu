@@ -34,5 +34,4 @@ class Pessoa:
         return self.__altura
 
     def __str__(self):
-        print(f'Nome: {self.get_nome()}\nCPF: {self.get_cpf()}\nIdade: {self.get_idade()}\nAltura: {self.get_altura()}')
-    
+        return f'Nome: {self.get_nome()}\nCPF: {self.get_cpf()}\nIdade: {self.get_idade()}\nAltura: {self.get_altura()}'

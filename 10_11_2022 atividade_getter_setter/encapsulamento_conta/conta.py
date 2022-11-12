@@ -34,4 +34,4 @@ class Conta:
         return self.__limite
 
     def __str__(self):
-        print(f'Titular: {self.get_titular()}\nNúmero: {self.get_numero()}\nSaldo: {self.get_saldo()}\nLimite: {self.get_limite()}')
+        return f'Titular: {self.get_titular()}\nNúmero: {self.get_numero()}\nSaldo: {self.get_saldo()}\nLimite: {self.get_limite()}'
