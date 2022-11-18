@@ -1,0 +1,4 @@
+Santander; 123; Jean; 123312323; 20.00; Helio
+Jefferson; Santander; Cassa; 23123; 20.50; SDasdasds
+Blumenau; 1030; Jean; 124124124; 20.50; Jsadsad
+Blumenau; 1030; Jirson; 3123213; 20.04; sadasd
