@@ -19,4 +19,3 @@ def read():
         lista_contas.append(conta)
     contas.close()
     return lista_contas
-

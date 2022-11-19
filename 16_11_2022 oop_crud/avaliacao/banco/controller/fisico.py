@@ -1,13 +1,13 @@
 from model.pessoaFisica import PessoaFisica
 
 def create_psf(conta):
-    contas = open('avaliacao/banco/pessoafisica.txt', 'a')
+    contas = open('banco/pessoafisica.txt', 'a')
     contas.write(str(conta)+'\n')
     contas.close()
 
 def read_psf():
     lista_contas = []
-    contas = open('avaliacao/banco/pessoafisica.txt', 'r')
+    contas = open('banco/pessoafisica.txt', 'r')
 
     for conta in contas:
         conta = conta.strip()

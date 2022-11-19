@@ -1,13 +1,13 @@
 from model.pessoaJuridica import PessoaJuridica
 
 def create_pj(conta):
-    contas = open('avaliacao/banco/pessoajuridica.txt', 'a')
+    contas = open('banco/pessoajuridica.txt', 'a')
     contas.write(str(conta)+'\n')
     contas.close()
 
 def read_pj():
     lista_contas = []
-    contas = open('avaliacao/banco/pessoajuridica.txt', 'r')
+    contas = open('banco/pessoajuridica.txt', 'r')
     
     for conta in contas:
         conta = conta.strip()
