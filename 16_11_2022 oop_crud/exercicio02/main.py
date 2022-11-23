@@ -1,6 +1,8 @@
 from conta import Conta
 from controller import create, read, update, delete
 def menu():
+
+    
     conta = Conta()
     conta.titular = 'Jean'
     conta.numero = '123'
@@ -8,13 +10,13 @@ def menu():
 
     create(conta)
 
-    lista_contas = read()
-    
-    print(lista_contas)
+    lista_conta = read()
 
-    for c in lista_contas:
-        print(c)
+    for conta in lista_conta:
+        print(conta)
 
-    conta.delete('123')
+    delete('123')
+
+    read()
 
 menu()
