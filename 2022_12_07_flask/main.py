@@ -7,12 +7,8 @@ pessoa3 = Pessoa('Leandro', '27', '1.94')
 
 lista = [pessoa1, pessoa2, pessoa3]
 
-#
 app = Flask(__name__)
 
-
-
-#
 @app.route('/')
 def index():
     return render_template('index.html', titulo='Lista' ,pessoas = lista)
@@ -35,4 +31,3 @@ def criar():
     return redirect('/')
 
 app.run(debug=True)
-
