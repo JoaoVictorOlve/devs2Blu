@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi import HTTPException
 from fastapi import status
 from models import Aluno
+from fastapi import Path
+from fastapi import Response
 
 app = FastAPI()
 
@@ -20,6 +22,7 @@ alunos = {
 async def get_alunos():
     return alunos
 
+#Informa o último ID consultado
 @app.get("/alunos/{aluno_id}")
 async def get_aluno(aluno_id:int):
     try:
@@ -35,23 +38,46 @@ async def get_aluno(aluno_id:int):
 async def post_aluno(aluno:Aluno):
     next_id : int = len(alunos) + 1
     alunos[next_id] = aluno
+    del aluno.id
     return aluno
 
-# @app.get("/alunos/{aluno_name}")
-# async def get_aluno_by_name(aluno_name:str):
-#     try:
-#         for aluno in alunos.values():
-#             if aluno["Nome"] == aluno_name:
-#                 print(aluno["Nome"])
-#                 return aluno
+@app.get("/alunos/{aluno_name}")
+async def get_aluno_by_name(aluno_name:str):
+    for aluno in alunos.values():
+        if aluno["Nome"] == aluno_name:
+            print(aluno["Nome"])
+            return aluno
 
-#     except KeyError:
-#         raise HTTPException(
-#             status_code=status.HTTP_404_NOT_FOUND, detail="Aluno não encontrado"
-#         )
+@app.put("/alunos/{aluno_id}")
+async def put_aluno (aluno_id:int, aluno:Aluno):
+    if aluno_id in alunos:
+        alunos[aluno_id] = aluno
+        del aluno.id
+        return aluno
+    else:
+        raise HTTPException(
+            status_code = status.HTTP_404_NOT_FOUND, detail="Aluno não encontrado"
+        )
 
+@app.get("/calc/")
+async def calc (valor_um:int = 0 , valor_dois:int = 0, valor_tres:int = 0):
+    valor_final = valor_um + valor_dois + valor_tres
+    raise HTTPException(
+        status_code = status.HTTP_200_OK, detail=f"Resultado de {valor_um}, {valor_dois} e {valor_tres} é {valor_final}"
+    )
 
+@app.delete("/alunos/{aluno_id}")
+async def delete_aluno (aluno_id:int):
+    if aluno_id in alunos:
+        del alunos[aluno_id]
+        raise HTTPException(
+            status_code = status.HTTP_200_OK, detail="Aluno deletado com sucesso"
+        )
 
+    else:
+        raise HTTPException(
+            status_code = status.HTTP_404_NOT_FOUND, detail="Aluno não encontrado"
+        )
 
 if __name__ == "__main__":
     import uvicorn
