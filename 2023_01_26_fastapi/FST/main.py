@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi import HTTPException, Query, Path, Header
 from fastapi import status
-from models import Aluno
+from models import Aluno, alunos
 from fastapi import Path
 from fastapi import Response, Depends
 from typing import Optional, Any
@@ -25,12 +25,12 @@ def db():
 async def raiz():
     return  {"mensagem":"Seja bem vindo ao more devs"}
 
-alunos = {
-    1: {"Nome" : "Lirinha", "Idade" : "195", "E-mail" : "lirinha@gmail.com"},
-    2: {"Nome" : "João", "Idade" : "15", "E-mail" : "joaosportclub@outlook.com"},
-    3: {"Nome" : "Vander", "Idade" : "27", "E-mail" : "fiodovander@microsoft.com"}, 
-    4: {"Nome" : "Thiago", "Idade" : "33", "E-mail" : "thiagogta4@hotmail.com"}
-}
+# alunos = {
+#     1: {"Nome" : "Lirinha", "Idade" : "195", "E-mail" : "lirinha@gmail.com"},
+#     2: {"Nome" : "João", "Idade" : "15", "E-mail" : "joaosportclub@outlook.com"},
+#     3: {"Nome" : "Vander", "Idade" : "27", "E-mail" : "fiodovander@microsoft.com"}, 
+#     4: {"Nome" : "Thiago", "Idade" : "33", "E-mail" : "thiagogta4@hotmail.com"}
+# }
 
 @app.get('/alunos', description='lista de todos os alunos', summary='retorno substantivo', response_description='Lista alunos cadastrados')
 async def get_alunos():
