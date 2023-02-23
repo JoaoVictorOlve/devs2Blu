@@ -59,7 +59,7 @@ async def put_aluno(aluno_id:int, aluno : AlunoSchema, db: AsyncSession = Depend
             aluno_up.nome = aluno.nome
             aluno_up.email = aluno.email
             await session.commit()
-            return JSONResponse(content=jsonable_encoder(aluno_up))
+            return Response(status_code=status.HTTP_202_ACCEPTED)
         else:
             raise HTTPException(detail='Aluno não encontrado', status_code=status.HTTP_404_NOT_FOUND)
 
