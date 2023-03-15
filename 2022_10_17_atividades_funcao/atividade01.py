@@ -17,3 +17,5 @@ def lerFuncionario():
         print('Salário:', funcionario['salario'])
 
 lerFuncionario()
+
+#teste
